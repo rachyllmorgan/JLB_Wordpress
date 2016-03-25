@@ -1,3 +1,11 @@
 This is the Main.html
 
-<a href="#/demo"> Link to Demo page</a>
+<ul>
+	<li ng-repeat="post in posts">
+		<a href="#/posts/{{post.ID}}">
+			{{post.title.rendered}}
+		</a>
+	</li>
+</ul>
+
+<a href="#/posts"> Link to All Posts</a>
