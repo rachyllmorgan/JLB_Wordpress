@@ -256,7 +256,11 @@ function twentysixteen_scripts() {
 
 	wp_enqueue_script( 'twentysixteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151112', true );
 
+	// Load AngularJS.
 	wp_enqueue_script('angularjs', get_stylesheet_directory_uri() . '/bower_components/angular/angular.min.js');
+
+	// Load angular-route.
+	wp_enqueue_script('angularjs-route', get_stylesheet_directory_uri() . '/bower_components/angular-route/angular-route.min.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

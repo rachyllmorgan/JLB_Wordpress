@@ -14,18 +14,15 @@
  * @since Twenty Sixteen 1.0
  */
 
-get_header(); ?>
+get_header(); wp_head();?>
 
 	<div id="primary" class="content-area" ng-app>
+
 		<main id="main" class="site-main" role="main">
 
-			<input type="text" ng-model="name">
+			<input type="text" ng-model="name" placeholder="Type your name here">
 
-			<p>Hello, {{name}}!</p>
-
-			<h1>Hide the DIV: <input type="checkbox" ng-model="myCheck"></h1>
-
-			<div ng-hide="myCheck"></div>
+			<p>Hello, {{name}}</p>
 
 		<?php if ( have_posts() ) : ?>
 

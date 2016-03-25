@@ -21,7 +21,15 @@
 
 	<?php twentysixteen_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<ul>
+		<li ng-repeat="post in posts">
+			<a href="{{post.ID}}">
+				{{post.title}}
+			</a>
+		</li>
+	</ul>
+
+<!-- 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
